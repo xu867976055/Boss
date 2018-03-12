@@ -1,0 +1,826 @@
+19:57:16,340  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+19:57:16,362  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+19:57:16,867  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+19:57:17,239  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 19:57:17 CST 2018]; root of context hierarchy
+19:57:17,327  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+19:57:17,406  INFO MLog:80 - MLog clients using log4j logging.
+19:57:17,731  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+19:57:17,871  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+19:57:17,871  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+19:57:17,878  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+19:57:17,983  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+19:57:17,984  INFO Environment:213 - HHH000206: hibernate.properties not found
+19:57:17,986  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+19:57:18,039  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+19:57:18,198  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u78fbb2s95lw2|dfbc58, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u78fbb2s95lw2|dfbc58, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+19:57:18,373  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+19:57:18,471  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+19:57:19,018  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+19:57:22,618  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 19:57:17 CST 2018]; root of context hierarchy
+19:57:22,619  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+19:58:01,301  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+19:58:01,322  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+19:58:01,672  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+19:58:01,971  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 19:58:01 CST 2018]; root of context hierarchy
+19:58:02,058  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+19:58:02,137  INFO MLog:80 - MLog clients using log4j logging.
+19:58:02,476  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+19:58:02,623  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+19:58:02,624  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+19:58:02,631  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+19:58:02,739  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+19:58:02,742  INFO Environment:213 - HHH000206: hibernate.properties not found
+19:58:02,743  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+19:58:02,798  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+19:58:02,957  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u78g9tn10qj839|dfbc58, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u78g9tn10qj839|dfbc58, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+19:58:03,155  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+19:58:03,258  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+19:58:03,800  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+19:58:05,164  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 19:58:01 CST 2018]; root of context hierarchy
+19:58:05,166  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:03:05,897  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:03:05,918  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:03:06,288  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:03:06,602  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:03:06 CST 2018]; root of context hierarchy
+20:03:06,695  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:03:06,777  INFO MLog:80 - MLog clients using log4j logging.
+20:03:07,127  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:03:07,269  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:03:07,270  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:03:07,277  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:03:07,388  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:03:07,390  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:03:07,392  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:03:07,444  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:03:07,608  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u78msvxf487oe|dfbc58, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u78msvxf487oe|dfbc58, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:03:07,805  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:03:07,903  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:03:08,488  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:03:09,853  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+20:03:10,007  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:03:06 CST 2018]; root of context hierarchy
+20:03:10,010  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:06:31,157  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:06:31,178  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:06:31,533  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:06:31,843  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:06:31 CST 2018]; root of context hierarchy
+20:06:31,929  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:06:32,011  INFO MLog:80 - MLog clients using log4j logging.
+20:06:32,361  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:06:32,502  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:06:32,502  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:06:32,509  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:06:32,616  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:06:32,618  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:06:32,619  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:06:32,672  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:06:32,837  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u78r78stybdb6|16d64f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u78r78stybdb6|16d64f, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:06:33,036  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:06:33,137  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:06:33,693  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:06:35,100  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:06:31 CST 2018]; root of context hierarchy
+20:06:35,102  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:17:03,867  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:17:03,888  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:17:04,243  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:17:04,557  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:17:04 CST 2018]; root of context hierarchy
+20:17:04,642  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:17:04,719  INFO MLog:80 - MLog clients using log4j logging.
+20:17:05,060  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:17:05,217  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:17:05,217  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:17:05,224  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:17:05,332  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:17:05,335  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:17:05,337  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:17:05,390  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:17:05,549  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u794rg11vggtes|1f08014, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u794rg11vggtes|1f08014, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:17:05,745  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:17:05,844  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:17:06,428  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:17:07,791  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:17:04 CST 2018]; root of context hierarchy
+20:17:07,793  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:18:13,895  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:18:13,915  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:18:14,255  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:18:14,553  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:18:14 CST 2018]; root of context hierarchy
+20:18:14,641  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:18:14,716  INFO MLog:80 - MLog clients using log4j logging.
+20:18:15,046  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:18:15,181  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:18:15,181  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:18:15,187  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:18:15,295  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:18:15,297  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:18:15,298  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:18:15,350  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:18:15,504  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u7969gdkrqim3|3d57c7, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u7969gdkrqim3|3d57c7, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:18:15,702  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:18:15,797  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:18:16,347  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:18:17,711  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:18:14 CST 2018]; root of context hierarchy
+20:18:17,713  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:19:05,137  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:19:05,158  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:19:05,538  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:19:05,871  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:19:05 CST 2018]; root of context hierarchy
+20:19:05,976  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:19:06,057  INFO MLog:80 - MLog clients using log4j logging.
+20:19:06,391  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:19:06,553  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:19:06,553  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:19:06,559  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:19:06,673  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:19:06,675  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:19:06,677  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:19:06,728  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:19:06,897  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u797d2j1i030g2|3d57c7, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u797d2j1i030g2|3d57c7, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:19:07,098  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:19:07,195  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:19:07,747  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:19:09,093  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:19:05 CST 2018]; root of context hierarchy
+20:19:09,095  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:19:41,307  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:19:41,327  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:19:41,685  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:19:41,986  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:19:41 CST 2018]; root of context hierarchy
+20:19:42,077  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:19:42,157  INFO MLog:80 - MLog clients using log4j logging.
+20:19:42,493  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:19:42,632  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:19:42,633  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:19:42,640  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:19:42,751  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:19:42,753  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:19:42,755  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:19:42,809  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:19:42,968  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u7984xa1a3uyrc|3d57c7, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u7984xa1a3uyrc|3d57c7, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:19:43,172  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:19:43,272  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:19:43,827  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:19:45,194  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:19:41 CST 2018]; root of context hierarchy
+20:19:45,196  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:19:56,419  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:19:56,439  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:19:56,805  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:19:57,116  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:19:57 CST 2018]; root of context hierarchy
+20:19:57,205  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:19:57,282  INFO MLog:80 - MLog clients using log4j logging.
+20:19:57,623  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:19:57,767  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:19:57,767  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:19:57,773  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:19:57,883  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:19:57,885  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:19:57,886  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:19:57,937  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:19:58,104  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u798gld1onkv22|3d57c7, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u798gld1onkv22|3d57c7, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:19:58,311  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:19:58,410  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:19:58,962  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:20:00,521  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:19:57 CST 2018]; root of context hierarchy
+20:20:00,523  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:20:08,047  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:20:08,068  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:20:08,430  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:20:08,736  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:20:08 CST 2018]; root of context hierarchy
+20:20:08,824  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:20:08,921  INFO MLog:80 - MLog clients using log4j logging.
+20:20:09,250  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:20:09,389  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:20:09,389  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:20:09,395  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:20:09,502  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:20:09,504  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:20:09,505  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:20:09,568  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:20:09,726  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u798pktocq3t3|3d57c7, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u798pktocq3t3|3d57c7, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:20:09,924  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:20:10,020  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:20:10,596  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:20:11,983  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:20:08 CST 2018]; root of context hierarchy
+20:20:11,984  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:26:34,006  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:26:34,028  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:26:34,379  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:26:34,680  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:26:34 CST 2018]; root of context hierarchy
+20:26:34,766  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:26:34,847  INFO MLog:80 - MLog clients using log4j logging.
+20:26:35,183  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:26:35,322  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:26:35,322  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:26:35,328  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:26:35,437  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:26:35,438  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:26:35,440  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:26:35,491  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:26:35,644  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u79gzcwwun1mt|12d0d24, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u79gzcwwun1mt|12d0d24, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:26:35,847  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:26:35,942  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:26:36,477  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:26:37,826  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+20:26:38,082  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:26:34 CST 2018]; root of context hierarchy
+20:26:38,084  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:28:02,936  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:28:02,959  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:28:03,318  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:28:03,622  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:28:03 CST 2018]; root of context hierarchy
+20:28:03,708  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:28:03,784  INFO MLog:80 - MLog clients using log4j logging.
+20:28:04,115  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:28:04,252  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:28:04,252  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:28:04,258  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:28:04,363  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:28:04,365  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:28:04,366  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:28:04,418  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:28:04,572  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u79ivzc1x4etg6|12d0d24, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u79ivzc1x4etg6|12d0d24, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:28:04,765  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:28:04,860  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:28:05,398  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:28:06,740  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+20:28:06,897  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:28:03 CST 2018]; root of context hierarchy
+20:28:06,898  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:30:11,651  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:30:11,671  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:30:12,034  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:30:12,334  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:30:12 CST 2018]; root of context hierarchy
+20:30:12,425  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:30:12,501  INFO MLog:80 - MLog clients using log4j logging.
+20:30:12,842  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:30:12,980  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:30:12,980  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:30:12,987  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:30:13,092  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:30:13,094  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:30:13,095  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:30:13,152  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:30:13,307  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u79lnau16wtbfd|12d0d24, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u79lnau16wtbfd|12d0d24, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:30:13,495  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:30:13,593  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:30:14,158  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:30:15,539  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+20:30:15,697  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:30:12 CST 2018]; root of context hierarchy
+20:30:15,699  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:31:45,348  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:31:45,373  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:31:45,858  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:31:46,224  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:31:46 CST 2018]; root of context hierarchy
+20:31:46,321  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:31:46,416  INFO MLog:80 - MLog clients using log4j logging.
+20:31:46,753  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:31:46,917  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:31:46,917  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:31:46,925  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:31:47,052  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:31:47,055  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:31:47,057  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:31:47,122  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:31:47,299  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u79nnrmb4cb5n|12d0d24, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u79nnrmb4cb5n|12d0d24, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:31:47,513  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:31:47,617  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:31:48,241  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:31:49,800  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+20:31:50,098  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:31:46 CST 2018]; root of context hierarchy
+20:31:50,100  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:32:16,055  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:32:16,075  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:32:16,420  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:32:16,722  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:32:16 CST 2018]; root of context hierarchy
+20:32:16,811  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:32:16,888  INFO MLog:80 - MLog clients using log4j logging.
+20:32:17,232  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:32:17,367  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:32:17,368  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:32:17,374  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:32:17,484  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:32:17,486  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:32:17,488  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:32:17,540  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:32:17,692  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u79oba216qzri5|12d0d24, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u79oba216qzri5|12d0d24, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:32:17,885  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:32:17,980  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:32:18,529  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:32:19,877  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+20:32:20,046  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:32:16 CST 2018]; root of context hierarchy
+20:32:20,048  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:32:34,807  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:32:34,828  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:32:35,184  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:32:35,489  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:32:35 CST 2018]; root of context hierarchy
+20:32:35,577  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:32:35,657  INFO MLog:80 - MLog clients using log4j logging.
+20:32:35,990  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:32:36,126  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:32:36,127  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:32:36,133  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:32:36,237  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:32:36,239  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:32:36,241  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:32:36,293  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:32:36,449  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u79oprds94fd1|12d0d24, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u79oprds94fd1|12d0d24, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:32:36,635  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:32:36,732  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:32:37,273  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:32:38,650  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+20:32:38,807  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:32:35 CST 2018]; root of context hierarchy
+20:32:38,808  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:54:37,943  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:54:37,964  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:54:38,324  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:54:38,627  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:54:38 CST 2018]; root of context hierarchy
+20:54:38,714  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:54:38,792  INFO MLog:80 - MLog clients using log4j logging.
+20:54:39,128  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:54:39,272  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:54:39,273  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:54:39,279  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:54:39,392  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:54:39,394  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:54:39,395  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:54:39,449  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:54:39,608  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u7ah2p51jj7ilv|1fb19a0, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u7ah2p51jj7ilv|1fb19a0, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:54:39,800  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:54:39,897  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:54:40,443  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:54:41,827  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+20:54:41,993  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:54:38 CST 2018]; root of context hierarchy
+20:54:41,994  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:57:08,607  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+20:57:08,628  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+20:57:08,974  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+20:57:09,271  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:57:09 CST 2018]; root of context hierarchy
+20:57:09,360  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:57:09,437  INFO MLog:80 - MLog clients using log4j logging.
+20:57:09,763  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+20:57:09,903  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+20:57:09,904  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+20:57:09,910  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20:57:10,018  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+20:57:10,020  INFO Environment:213 - HHH000206: hibernate.properties not found
+20:57:10,021  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+20:57:10,074  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:57:10,227  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u7akaxp1onoroh|78284b, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u7akaxp1onoroh|78284b, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+20:57:10,422  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+20:57:10,521  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+20:57:11,061  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+20:57:12,322  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+20:57:12,395  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 54 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+20:57:12,396  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 70 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+20:57:12,553  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 20:57:09 CST 2018]; root of context hierarchy
+20:57:12,554  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:00:36,522  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:00:36,542  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+21:00:36,903  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+21:00:37,213  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:00:37 CST 2018]; root of context hierarchy
+21:00:37,302  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+21:00:37,381  INFO MLog:80 - MLog clients using log4j logging.
+21:00:37,722  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+21:00:37,856  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+21:00:37,857  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+21:00:37,863  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+21:00:37,968  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+21:00:37,970  INFO Environment:213 - HHH000206: hibernate.properties not found
+21:00:37,971  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+21:00:38,033  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:00:38,197  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u7aordy1prltbw|1370f42, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u7aordy1prltbw|1370f42, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+21:00:38,386  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:00:38,484  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+21:00:39,033  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+21:00:40,322  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+21:00:40,353 ERROR ErrorCounter:60 - line 1:8: unexpected token: *
+21:00:40,354 ERROR ErrorCounter:55 - line 1:8: unexpected token: *
+line 1:8: unexpected token: *
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1245)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1022)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:730)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:323)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:186)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:279)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:187)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:142)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:76)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:150)
+	at org.hibernate.internal.AbstractSessionImpl.getHQLQueryPlan(AbstractSessionImpl.java:302)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:240)
+	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1894)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:344)
+	at com.sun.proxy.$Proxy35.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:86)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:62)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:72)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:53)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:144)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:212)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:77)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:435)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:220)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:266)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:252)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:92)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+21:00:40,359  WARN GenericApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'standardRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.itheima.bos.dao.base.StandardRepository.findByNameAndMaxWeight12345(java.lang.String,java.lang.Integer)!
+21:00:40,360  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:00:40,362 ERROR TestContextManager:231 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643] to prepare test instance [com.itheima.bos.dao.test.StandardRepositoryTest@1bd20ee]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'standardRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.itheima.bos.dao.base.StandardRepository.findByNameAndMaxWeight12345(java.lang.String,java.lang.Integer)!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.itheima.bos.dao.base.StandardRepository.findByNameAndMaxWeight12345(java.lang.String,java.lang.Integer)!
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:92)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:62)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:72)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:53)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:144)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:212)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:77)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:435)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:220)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:266)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:252)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:92)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 40 more
+Caused by: java.lang.IllegalArgumentException: org.hibernate.hql.internal.ast.QuerySyntaxException: unexpected token: * near line 1, column 8 [select * from T_STANDARD where name=? and maxWeight=?]
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1679)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1602)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1608)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:294)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:344)
+	at com.sun.proxy.$Proxy35.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:86)
+	... 53 more
+Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: unexpected token: * near line 1, column 8 [select * from T_STANDARD where name=? and maxWeight=?]
+	at org.hibernate.hql.internal.ast.QuerySyntaxException.convert(QuerySyntaxException.java:74)
+	at org.hibernate.hql.internal.ast.ErrorCounter.throwQueryException(ErrorCounter.java:91)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:288)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:187)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:142)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:76)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:150)
+	at org.hibernate.internal.AbstractSessionImpl.getHQLQueryPlan(AbstractSessionImpl.java:302)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:240)
+	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1894)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:291)
+	... 60 more
+21:03:22,626  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:03:22,646  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+21:03:22,998  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+21:03:23,307  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:03:23 CST 2018]; root of context hierarchy
+21:03:23,395  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+21:03:23,475  INFO MLog:80 - MLog clients using log4j logging.
+21:03:23,834  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+21:03:24,015  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+21:03:24,015  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+21:03:24,024  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+21:03:24,140  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+21:03:24,142  INFO Environment:213 - HHH000206: hibernate.properties not found
+21:03:24,144  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+21:03:24,196  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:03:24,355  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u7asbjogohy5g|1370f42, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u7asbjogohy5g|1370f42, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+21:03:24,561  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:03:24,664  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+21:03:25,217  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+21:03:26,512  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+21:03:26,589  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 54 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:03:26,591  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 70 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:03:26,859  WARN SqlExceptionHelper:127 - SQL Error: 904, SQLState: 42000
+21:03:26,859 ERROR SqlExceptionHelper:129 - ORA-00904: "MAXWEIGHT": 标识符无效
+
+21:03:26,869  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:03:23 CST 2018]; root of context hierarchy
+21:03:26,871  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:04:40,883  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:04:40,904  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+21:04:41,259  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+21:04:41,577  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:04:41 CST 2018]; root of context hierarchy
+21:04:41,677  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+21:04:41,756  INFO MLog:80 - MLog clients using log4j logging.
+21:04:42,092  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+21:04:42,231  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+21:04:42,231  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+21:04:42,237  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+21:04:42,350  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+21:04:42,353  INFO Environment:213 - HHH000206: hibernate.properties not found
+21:04:42,354  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+21:04:42,415  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:04:42,585  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u7atzy6jmrg8z|1370f42, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u7atzy6jmrg8z|1370f42, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+21:04:42,791  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:04:42,891  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+21:04:43,453  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+21:04:44,735  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+21:04:44,811  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 54 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:04:44,813  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 70 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:04:44,986  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:04:41 CST 2018]; root of context hierarchy
+21:04:44,988  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:09:43,384  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:09:43,404  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+21:09:43,758  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+21:09:44,059  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:09:44 CST 2018]; root of context hierarchy
+21:09:44,150  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+21:09:44,228  INFO MLog:80 - MLog clients using log4j logging.
+21:09:44,563  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+21:09:44,703  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+21:09:44,704  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+21:09:44,713  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+21:09:44,820  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+21:09:44,823  INFO Environment:213 - HHH000206: hibernate.properties not found
+21:09:44,824  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+21:09:44,880  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:09:45,039  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u7b0hc5bjes40|12c1b98, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u7b0hc5bjes40|12c1b98, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+21:09:45,250  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:09:45,353  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+21:09:45,908  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+21:09:47,209  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+21:09:47,284  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 54 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:09:47,285  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 70 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:09:47,346  WARN GenericApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'standardRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property updateWeightByname found for type Standard!
+21:09:47,347  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:09:47,350 ERROR TestContextManager:231 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643] to prepare test instance [com.itheima.bos.dao.test.StandardRepositoryTest@e02f6a]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'standardRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property updateWeightByname found for type Standard!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property updateWeightByname found for type Standard!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:77)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:329)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:309)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:272)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:243)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:76)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:235)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.buildTree(PartTree.java:373)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:353)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:84)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:63)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:103)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:214)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:77)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:435)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:220)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:266)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:252)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:92)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 40 more
+21:11:47,045  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:11:47,066  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+21:11:47,443  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+21:11:47,760  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:11:47 CST 2018]; root of context hierarchy
+21:11:47,849  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+21:11:47,928  INFO MLog:80 - MLog clients using log4j logging.
+21:11:48,253  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+21:11:48,397  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+21:11:48,398  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+21:11:48,406  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+21:11:48,512  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+21:11:48,514  INFO Environment:213 - HHH000206: hibernate.properties not found
+21:11:48,516  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+21:11:48,570  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:11:48,727  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u7b34s71p3er96|12c1b98, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u7b34s71p3er96|12c1b98, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+21:11:48,930  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:11:49,030  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+21:11:49,576  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+21:11:50,867  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+21:11:50,941  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 54 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:11:50,943  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 70 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:11:51,002  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 59 in HQL: [update com.itheima.bos.domain.base.Standard set maxWeight=? where name=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:11:51,002  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 72 in HQL: [update com.itheima.bos.domain.base.Standard set maxWeight=? where name=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:11:51,073  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:11:47 CST 2018]; root of context hierarchy
+21:11:51,074  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:13:00,450  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:13:00,471  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+21:13:00,832  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+21:13:01,139  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:13:01 CST 2018]; root of context hierarchy
+21:13:01,226  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+21:13:01,304  INFO MLog:80 - MLog clients using log4j logging.
+21:13:01,642  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+21:13:01,775  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+21:13:01,775  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+21:13:01,784  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+21:13:01,887  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+21:13:01,889  INFO Environment:213 - HHH000206: hibernate.properties not found
+21:13:01,891  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+21:13:01,944  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:13:02,102  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u7b4pegni6gpa|12c1b98, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u7b4pegni6gpa|12c1b98, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+21:13:02,312  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:13:02,411  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+21:13:02,953  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+21:13:04,233  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+21:13:04,308  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 54 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:13:04,309  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 70 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:13:04,386  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 59 in HQL: [update com.itheima.bos.domain.base.Standard set maxWeight=? where name=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:13:04,387  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 72 in HQL: [update com.itheima.bos.domain.base.Standard set maxWeight=? where name=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:13:04,489  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:13:01 CST 2018]; root of context hierarchy
+21:13:04,491  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:16:28,806  INFO DefaultTestContextBootstrapper:259 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:16:28,830  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49fd9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adede5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1928643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@25a98f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1993335, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@322d26]
+21:16:29,191  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+21:16:29,493  INFO GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:16:29 CST 2018]; root of context hierarchy
+21:16:29,582  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+21:16:29,659  INFO MLog:80 - MLog clients using log4j logging.
+21:16:29,993  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+21:16:30,129  INFO LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+21:16:30,130  WARN HibernatePersistence:41 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+21:16:30,138  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+21:16:30,242  INFO Version:37 - HHH000412: Hibernate Core {5.0.7.Final}
+21:16:30,243  INFO Environment:213 - HHH000206: hibernate.properties not found
+21:16:30,245  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+21:16:30,296  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:16:30,449  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31sr5m9u7b9664mwzij1|9f4771, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31sr5m9u7b9664mwzij1|9f4771, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.136.136:1521:ORCL, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+21:16:30,648  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:16:30,748  INFO LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+21:16:31,290  INFO SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+21:16:32,587  INFO QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+21:16:32,662  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 61 in HQL: [delete from com.itheima.bos.domain.base.Standard where name=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:16:32,679  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 54 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:16:32,680  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 70 in HQL: [from com.itheima.bos.domain.base.Standard where name=? and maxWeight=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:16:32,732  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 59 in HQL: [update com.itheima.bos.domain.base.Standard set maxWeight=? where name=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:16:32,732  WARN HqlSqlWalker:992 - [DEPRECATION] Encountered positional parameter near line 1, column 72 in HQL: [update com.itheima.bos.domain.base.Standard set maxWeight=? where name=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+21:16:32,813  INFO GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@b494a6: startup date [Mon Mar 12 21:16:29 CST 2018]; root of context hierarchy
+21:16:32,814  INFO LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'

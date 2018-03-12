@@ -31,6 +31,20 @@
 	$(function(){
 		
 		
+		var setting = {
+			data: {
+				simpleData: {
+					enable: true,
+					idKey: "id",
+					pIdKey: "pId",
+					rootPId: 0
+				}
+			},
+			callback: {
+				onClick: zTreeOnClick
+			}
+		};
+
 		function zTreeOnClick(event, treeId, treeNode) {
 			
 			if(treeNode.pId != 0){
@@ -49,20 +63,7 @@
 		};
 		
 		
-		var setting = {
-			data: {
-				simpleData: {
-					enable: true,
-					idKey: "id",
-					pIdKey: "pId",
-					rootPId: 0
-				}
-			},
-			callback: {
-				onClick: zTreeOnClick
-			}
 		
-		};
 		
 		$.get("data/menu.json",function(data){
 			$.fn.zTree.init($("#treeDemo"), setting, data);
@@ -86,6 +87,7 @@
 			</div>
 		</div>
 		<div data-options="region:'center',title:'消息中心',iconCls:'icon-mini-add'">
+			
 			
 			<div class="easyui-tabs" data-options="fit:true" id="tt">
 				<div title="About" style="padding:10px"></div>

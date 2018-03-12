@@ -6,4 +6,11 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>boss_management_dao</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.itheima</groupId>
+  		<artifactId>boss_management_domain</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
