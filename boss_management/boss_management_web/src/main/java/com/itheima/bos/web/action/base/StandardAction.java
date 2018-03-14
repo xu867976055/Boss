@@ -26,6 +26,7 @@ import com.itheima.bos.service.StandardService;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 /**  
@@ -64,7 +65,7 @@ public class StandardAction extends ActionSupport implements ModelDriven<Standar
         this.rows = rows;
     }
     
-    @Action(value="standardAction_findAll")
+    @Action(value="standardAction_findByPage")
     public String findByPage() throws IOException{
      // EasyUI的页码是从1开始的
      // SPringDataJPA的页码是从0开始的
@@ -90,6 +91,20 @@ public class StandardAction extends ActionSupport implements ModelDriven<Standar
        
         return NONE;
         
+    }
+    
+    
+    @Action(value="standardAction_findAll")
+    public String findAll() throws IOException{
+        
+        Page<Standard> page = standardService.findAll(null);
+        List<Standard> list = page.getContent();
+        String json = JSONArray.fromObject(list).toString();
+        HttpServletResponse response = ServletActionContext.getResponse();
+        response.setContentType("application/json;charset=UTF-8");
+        response.getWriter().write(json);
+        
+        return NONE;
     }
     
 
