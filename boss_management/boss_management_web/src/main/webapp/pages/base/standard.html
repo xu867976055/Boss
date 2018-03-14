@@ -27,10 +27,10 @@
 					border : false,
 					rownumbers : true,
 					striped : true,
-					pageList: [30,50,100],
+					pageList: [5,10,15],
 					pagination : true,
 					toolbar : toolbar,
-					url : "../../data/standard.json",
+					url : "../../standardAction_findAll.action",
 					idField : 'id',
 					columns : columns
 				});
@@ -50,7 +50,16 @@
 				text : '修改',
 				iconCls : 'icon-edit',
 				handler : function(){
-					alert('修改');
+					//判断用户勾选的数据的条数
+					var result = $("#grid").datagrid("getSelections")
+					//alert(result.length)
+					if(result.length == 1){
+						$("#standardWindow").window("open")
+						$("#standardWindow").form("load",result[0])
+					}else{
+						$.messager.alert('提示','你只能选择一条信息进行修改','info');  
+					} 
+					
 				}
 			},{
 				id : 'button-delete',

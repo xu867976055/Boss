@@ -2,13 +2,14 @@ package com.itheima.bos.dao.test;
 
 import java.util.List;
 
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.itheima.bos.dao.base.StandardRepository;
+import com.itheima.bos.dao.base.StandardRepository2;
 import com.itheima.bos.domain.base.Standard;
 
 /**  
@@ -20,7 +21,7 @@ import com.itheima.bos.domain.base.Standard;
 @ContextConfiguration("classpath:applicationContext.xml")
 public class StandardRepositoryTest {
     @Autowired
-    private StandardRepository standardRepository;
+    private StandardRepository2 standardRepository;
 //    添加
     @Test
     public void save(){
