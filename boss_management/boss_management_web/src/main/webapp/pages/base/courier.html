@@ -225,6 +225,7 @@
         	var result = $("#searchForm").serializeJson();
         	//让datagrid重新发起请求
         	$("#grid").datagrid('load',result);
+        	$("#searchWindow").window("close")
         }
 		
 	</script>

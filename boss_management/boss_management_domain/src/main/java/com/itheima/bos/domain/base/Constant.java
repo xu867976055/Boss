@@ -8,5 +8,6 @@ public interface Constant {
     String SAVE_SUCCESS = "save_success";
     String FIND_BY_PAGE_SUCCESS = "find_by_page_success";
     String DELETE_BY_ID_SUCCESS = "delete_by_id_success";
+    String IMPORT_SUCCESS = "import_success";
 }
   
