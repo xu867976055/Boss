@@ -8,9 +8,12 @@ import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.data.domain.Page;
+import org.springframework.ui.Model;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
 
@@ -21,13 +24,11 @@ import net.sf.json.JsonConfig;
  */
 public class CommonAction<T> extends ActionSupport implements ModelDriven<T>{
 
-    private T model;
-    private Class<T> clazz;
+    protected T model;
     
     public CommonAction(Class<T> clazz){
-        this.clazz = clazz;
         try {
-            clazz.newInstance();
+            model = clazz.newInstance();
         } catch (Exception e) {
               
             e.printStackTrace();  
@@ -41,8 +42,8 @@ public class CommonAction<T> extends ActionSupport implements ModelDriven<T>{
     }
     
     //使用属性驱动获取分页数据
-    private int page;//第几页
-    private int rows;//一页显示几行
+    protected int page;//第几页
+    protected int rows;//一页显示几行
     public void setPage(int page) {
         this.page = page;
     }
@@ -64,6 +65,19 @@ public class CommonAction<T> extends ActionSupport implements ModelDriven<T>{
             json=JSONObject.fromObject(map,jsonConfig).toString();
         }else{
             json=JSONObject.fromObject(map).toString();
+        }
+        
+        HttpServletResponse response = ServletActionContext.getResponse();
+        response.setContentType("application/json;charset=UTF-8");
+        response.getWriter().write(json);
+    }
+    
+    public void list2json(List<T> list,JsonConfig jsonConfig) throws IOException{
+        String json;
+        if(jsonConfig != null){
+            json = JSONArray.fromObject(list,jsonConfig).toString();
+        }else{
+            json = JSONArray.fromObject(list).toString();
         }
         
         HttpServletResponse response = ServletActionContext.getResponse();
