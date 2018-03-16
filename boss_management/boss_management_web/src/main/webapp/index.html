@@ -56,7 +56,14 @@
 						title: treeNode.name,
 						selected: true,
 						closable: true,
-						content: '<iframe width="100%" height="100%" frameborder="0" src="'+treeNode.page+'"></iframe>'
+						content: '<iframe width="100%" height="100%" frameborder="0" src="'+treeNode.page+'"></iframe>',
+						tools:[{ 
+							iconCls:'icon-reload', // 刷新按钮
+							handler : function(){
+								var tab = $('#tt').tabs('getTab',treeNode.name);
+								$("iframe[src='"+treeNode.page+"']").get(0).contentWindow.location.reload(true);
+							}
+						}] 
 					});
 				}
 			}
