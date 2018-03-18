@@ -1,7 +1,8 @@
 package com.itheima.bos.web.action.base;
-
 import java.io.IOException;
-
+import java.util.List;
+import javax.ws.rs.core.MediaType;
+import org.apache.cxf.jaxrs.client.WebClient;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
@@ -12,11 +13,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
-
 import com.itheima.bos.domain.base.Constant;
 import com.itheima.bos.domain.base.FixedArea;
 import com.itheima.bos.service.FixedAreaService;
 import com.itheima.bos.web.action.CommonAction;
+import com.itheima.crm.domain.Customer;
 
 import net.sf.json.JsonConfig;
 
@@ -59,6 +60,59 @@ public class FixedAreaAction extends CommonAction<FixedArea>{
         page2json(page, jsonConfig);
         return NONE;
     }
+    
+    //向CRM系统发起请求，查询未关联的定区的客户
+    @Action(value="fixedAreaAction_findNoAssociationSelectCustomer")
+    public String findUnAssociatedCustomers() throws IOException{
+        
+        List<Customer> list =  (List<Customer>) WebClient.create("http://localhost:8180/crm/webService/customerService/findUnassociationCustomer")
+        .type(MediaType.APPLICATION_JSON)
+        .accept(MediaType.APPLICATION_JSON)
+        .getCollection(Customer.class);
+        
+        list2json(list, null);
+        
+        return NONE;
+    }
+    
+  //向CRM系统发起请求，查询已关联的定区的客户
+    @Action(value="fixedAreaAction_findAssociationSelectCustomer")
+    public String findAssociatedCustomers() throws IOException{
+        
+        List<Customer> list =  (List<Customer>) WebClient.create("http://localhost:8180/crm/webService/customerService/findAssociationCustomer")
+        .query("fixedAreaId", getModel().getId())
+        .type(MediaType.APPLICATION_JSON)
+        .accept(MediaType.APPLICATION_JSON)
+        .getCollection(Customer.class);
+        list2json(list, null);
+        return NONE;
+    }
+    
+    
+    
+   //需要获得传递过来的定区id和客户id
+    private Long[] customerIds;
+    public void setCustomerIds(Long[] customerIds) {
+        this.customerIds = customerIds;
+    }
+    
+    //向Crm系统发送关联请求,关联客户到指定区域
+    @Action(value="fixedAreaAction_assignCustomers2FixedArea",results={@Result(name="success",location="/pages/base/fixed_area.html",type="redirect")})
+    public String assignCustomers2FixedArea(){
+        WebClient.create("http://localhost:8180/crm/webService/customerService/assignCustomers2FixedArea")
+        .query("customerIds", customerIds)
+        .query("fixedAreaId", getModel().getId())
+        .type(MediaType.APPLICATION_JSON)
+        .accept(MediaType.APPLICATION_JSON)
+        .put(null);
+        
+        return SUCCESS;
+    }
+    
 
 }
+    
+    
+
+
   
