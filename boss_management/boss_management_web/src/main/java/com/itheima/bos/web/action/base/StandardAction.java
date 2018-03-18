@@ -54,8 +54,8 @@ public class StandardAction extends CommonAction<Standard> {
     @Action(value = "standardAction_save", results = {@Result(name = "save_success",
             location = "/pages/base/standard.html", type = "redirect")})
     public String save() {
-        System.out.println("....................."+model);
-        standardService.save(model);
+       
+        standardService.save(getModel());
         return Constant.SAVE_SUCCESS;
     }
 

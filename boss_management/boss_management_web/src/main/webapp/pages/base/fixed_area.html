@@ -126,7 +126,7 @@
 					pageList: [30,50,100],
 					pagination : true,
 					toolbar : toolbar,
-					url : "../../fixedAreaAction_pageQuery.action",
+					url : "../../fixedAreaAction_findByPage.action",
 					idField : 'id',
 					columns : columns,
 					onDblClickRow : doDblClickRow
@@ -258,6 +258,14 @@
 				
 			}
 		</script>
+		<script type="text/javascript">
+			function save(){
+				var result = $("#fixedAreaForm").form("validate")
+				if(result){
+					$("#fixedAreaForm").submit();
+				}
+			}
+		</script>
 	</head>
 
 	<body class="easyui-layout" style="visibility:hidden;">
@@ -279,7 +287,7 @@
 		<div class="easyui-window" title="定区添加修改" id="addWindow" collapsible="false" minimizable="false" maximizable="false" style="top:20px;left:200px">
 			<div style="height:31px;overflow:hidden;" split="false" border="false">
 				<div class="datagrid-toolbar">
-					<a id="save" icon="icon-save" href="#" class="easyui-linkbutton" plain="true">保存</a>
+					<a id="save" onclick="save()" icon="icon-save" href="#" class="easyui-linkbutton" plain="true">保存</a>
 					</script>
 				</div>
 			</div>
@@ -398,7 +406,7 @@
 							<td>
 								<!-- 存放定区编号 -->
 								<input type="hidden" name="id" id="courierFixedAreaId" />
-								<input data-options="ditable:false, url:'../../courierAction_listajax.action',valueField:'id',textField:'name'"
+								<input data-options="ditable:false, url:'',valueField:'id',textField:'name'"
 									 type="text" name="courierId" class="easyui-combobox" required="true" />
 							</td>
 						</tr>
