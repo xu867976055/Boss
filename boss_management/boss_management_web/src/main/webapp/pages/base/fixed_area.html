@@ -340,6 +340,17 @@
 		}
 		</script>
 		
+		<!-- 关联快递员提交 -->
+		<script type="text/javascript">
+			function submitData(){
+				//获取选中定区id
+				var rows = $("#grid").datagrid("getSelections")
+				$("#courierFixedAreaId").val(rows[0].id)
+				$("#courierForm").submit()
+			}
+			
+		</script>
+		
 	</head>
 
 	<body class="easyui-layout" style="visibility:hidden;">
@@ -472,7 +483,7 @@
 			collapsible="false" closed="true" minimizable="false" maximizable="false" style="top:20px;left:200px;width: 700px;height: 300px;">
 			<div style="overflow:auto;padding:5px;" border="false">
 				<form id="courierForm" 
-					action="../../fixedAreaAction_associationCourierToFixedArea.action" method="post">
+					action="../../fixedAreaAction_associationFixedAreaToCourier.action" method="post">
 					<table class="table-edit" width="80%" align="center">
 						<tr class="title">
 							<td colspan="2">关联快递员</td>
@@ -497,7 +508,7 @@
 						</tr>
 						<tr>
 							<td colspan="3">
-								<a id="associationCourierBtn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">关联快递员</a>
+								<a id="associationCourierBtn" onclick="submitData()" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">关联快递员</a>
 							 </td>
 						</tr>
 					</table>
