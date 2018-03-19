@@ -58,5 +58,12 @@ public class CustomerServiceImpl implements CustomerService {
         }
     }
 
+    @Override
+    public void noCustomers2FixedArea(String fixedAreaId) {
+          
+        customerrepository.unBindByFixedAreaId(fixedAreaId);
+    }
+
+
 }
   

@@ -32,6 +32,7 @@ import com.itheima.bos.domain.base.Constant;
 import com.itheima.bos.domain.base.Courier;
 import com.itheima.bos.domain.base.Standard;
 import com.itheima.bos.service.CourierService;
+import com.itheima.bos.web.action.CommonAction;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -47,31 +48,20 @@ import net.sf.json.JsonConfig;
 @Controller
 @Scope("prototype")
 @ParentPackage(value="struts-default")
-public class CourierAction extends ActionSupport implements ModelDriven<Courier> {
+public class CourierAction extends CommonAction<Courier>{
     
-    private Courier model = new Courier();
+    public CourierAction() {
+        super(Courier.class);  
+    }
     
     @Autowired
     private CourierService courierService;
     
-    @Override
-    public Courier getModel() {
-        return model;
-    }
 
     @Action(value="courierAction_save",results={@Result(name="save_success",location="/pages/base/courier.html",type="redirect")})
     public String save(){
         courierService.save(model);
         return Constant.SAVE_SUCCESS;
-    }
-    
-    private int page;
-    private int rows;
-    public void setPage(int page) {
-        this.page = page;
-    }
-    public void setRows(int rows) {
-        this.rows = rows;
     }
 
     @Action(value="courierAction_findByPage")
@@ -139,21 +129,13 @@ public class CourierAction extends ActionSupport implements ModelDriven<Courier>
         
         Pageable pageable = new PageRequest(page-1, rows);
         Page<Courier> page = courierService.findAll(specification,pageable);
-        Long total = page.getTotalElements();
-        List<Courier> list = page.getContent();
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("total",total);
-        map.put("rows", list);
     
         // 灵活控制输出的内容
         JsonConfig jsonConfig = new JsonConfig();
         jsonConfig.setExcludes(new String[] {"fixedAreas","takeTime"});
         
         // 在实际开发的时候,为了提高服务器的性能,把前台页面不需要的数据都应该忽略掉
-        String json = JSONObject.fromObject(map,jsonConfig).toString();
-        HttpServletResponse response = ServletActionContext.getResponse();
-        response.setContentType("application/json;charset=UTF-8");
-        response.getWriter().write(json);
+        page2json(page, jsonConfig);
         
         return NONE;
     }
@@ -163,10 +145,23 @@ public class CourierAction extends ActionSupport implements ModelDriven<Courier>
         this.ids = ids;
     }
     
-    @Action(value="courAction_delete",results={@Result(name="delete_by_id_success",location="/pages/base/courier.html",type="redirect")})
+    @Action(value="courierAction_delete",results={@Result(name="delete_by_id_success",location="/pages/base/courier.html",type="redirect")})
     public String delete(){
         courierService.deleteById(ids);
         return Constant.DELETE_BY_ID_SUCCESS;
+    }
+    
+//    查询在职的快递员
+    @Action(value="courierAction_findCourier")
+    public String findCourier() throws IOException{
+        
+        List<Courier> list = courierService.findCourier();
+        
+        JsonConfig jsonConfig = new JsonConfig();
+        jsonConfig.setExcludes(new String[] {"fixedAreas","takeTime"});
+        
+        list2json(list, jsonConfig);
+        return NONE;   
     }
 }
   

@@ -1,5 +1,7 @@
 package com.itheima.bos.service;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -21,6 +23,8 @@ public interface CourierService {
     void deleteById(String ids);
 
     Page<Courier> findAll(Specification<Courier> specification, Pageable pageable);
+
+    List<Courier> findCourier();
 
 }
   

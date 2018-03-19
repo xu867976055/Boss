@@ -482,20 +482,18 @@
 							<td>
 								<!-- 存放定区编号 -->
 								<input type="hidden" name="id" id="courierFixedAreaId" />
-								<input data-options="ditable:false, url:'',valueField:'id',textField:'name'"
+								<input data-options="ditable:false, url:'../../courierAction_findCourier.action',valueField:'id',textField:'name'"
 									 type="text" name="courierId" class="easyui-combobox" required="true" />
 							</td>
 						</tr>
 						<tr>
 							<td>选择收派时间</td>
-							<td>
-								<select required="true" class="easyui-combobox" name="takeTimeId">
-									<option>请选择</option>
-									<option value="1">北京早班</option>
-									<option value="2">北京晚班</option>
-								</select>
-								<!-- <input type="text" name="takeTimeId" class="easyui-combobox" required="true" /> -->
-							</td>
+							
+							<td><input
+							data-options="ditable:false, url:'../../takeTimeAction_findAll.action',valueField:'id',textField:'name'"
+							type="text" name="takeTimeId" class="easyui-combobox"
+							required="true" /></td>
+							
 						</tr>
 						<tr>
 							<td colspan="3">

@@ -96,15 +96,25 @@ public class FixedAreaAction extends CommonAction<FixedArea>{
         this.customerIds = customerIds;
     }
     
+    
     //向Crm系统发送关联请求,关联客户到指定区域
     @Action(value="fixedAreaAction_assignCustomers2FixedArea",results={@Result(name="success",location="/pages/base/fixed_area.html",type="redirect")})
     public String assignCustomers2FixedArea(){
-        WebClient.create("http://localhost:8180/crm/webService/customerService/assignCustomers2FixedArea")
-        .query("customerIds", customerIds)
-        .query("fixedAreaId", getModel().getId())
-        .type(MediaType.APPLICATION_JSON)
-        .accept(MediaType.APPLICATION_JSON)
-        .put(null);
+        if(customerIds != null){
+            WebClient.create("http://localhost:8180/crm/webService/customerService/assignCustomers2FixedArea")
+            .query("customerIds", customerIds)
+            .query("fixedAreaId", getModel().getId())
+            .type(MediaType.APPLICATION_JSON)
+            .accept(MediaType.APPLICATION_JSON)
+            .put(null);
+        }else{
+            WebClient.create("http://localhost:8180/crm/webService/customerService/noCustomers2FixedArea")
+            .query("fixedAreaId", getModel().getId())
+            .type(MediaType.APPLICATION_JSON)
+            .accept(MediaType.APPLICATION_JSON)
+            .put(null);
+        }
+       
         
         return SUCCESS;
     }

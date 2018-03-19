@@ -42,6 +42,9 @@ public interface CustomerService {
     @Path("/assignCustomers2FixedArea")
     public void assignCustomers2FixedArea(@QueryParam("fixedAreaId") String fixedAreaId,@QueryParam("customerIds") Long[] customerIds);
    
-    
+    @PUT
+    @Path("/noCustomers2FixedArea")
+    public void noCustomers2FixedArea(@QueryParam("fixedAreaId") String fixedAreaId);
+   
 }
   
