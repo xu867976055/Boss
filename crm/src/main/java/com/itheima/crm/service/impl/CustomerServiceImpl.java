@@ -64,6 +64,13 @@ public class CustomerServiceImpl implements CustomerService {
         customerrepository.unBindByFixedAreaId(fixedAreaId);
     }
 
+    @Override
+    public void saveCustomer(Customer customer) {
+        customerrepository.save(customer);
+    }
+    
+    
+
 
 }
   

@@ -44,6 +44,7 @@ public class SubareaAction extends CommonAction<SubArea>{
         
         subAreaService.save(getModel());
         return Constant.SAVE_SUCCESS;
+        
     }
 
     
