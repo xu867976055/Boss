@@ -15,6 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import com.itheima.bos.domain.base.Constant;
 import com.itheima.bos.domain.base.FixedArea;
+import com.itheima.bos.domain.base.SubArea;
 import com.itheima.bos.service.FixedAreaService;
 import com.itheima.bos.web.action.CommonAction;
 import com.itheima.crm.domain.Customer;
@@ -136,7 +137,29 @@ public class FixedAreaAction extends CommonAction<FixedArea>{
         return SUCCESS;
     }
     
-
+    
+    
+    
+    //关联分区
+    //需要获得传递过来的定区id和分区id
+     private Long[] subAreaIds;
+     public void setSubAreaIds(Long[] subAreaIds) {
+         this.subAreaIds = subAreaIds;
+     }
+     
+     
+     //向Crm系统发送关联请求,关联客户到指定区域
+     @Action(value="fixedAreaAction_assignSubArea2FixedArea",results={@Result(name="success",location="/pages/base/fixed_area.html",type="redirect")})
+     public String assignSubArea2FixedArea(){
+         if(subAreaIds != null){
+             fixedareaservice.assignSubArea2FixedArea(subAreaIds,model.getId());
+         }else{
+             fixedareaservice.noAssignSubArea2FixedArea(model.getId());
+         }
+        
+         return SUCCESS;
+     }
+    
 }
     
     

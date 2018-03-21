@@ -68,6 +68,12 @@ public class CustomerServiceImpl implements CustomerService {
     public void saveCustomer(Customer customer) {
         customerrepository.save(customer);
     }
+
+    @Override
+    public Customer findCustomer(String telephone) {
+        
+        return customerrepository.findByTelephone(telephone);
+    }
     
     
 

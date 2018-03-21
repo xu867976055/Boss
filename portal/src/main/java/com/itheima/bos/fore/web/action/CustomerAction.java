@@ -1,5 +1,9 @@
 package com.itheima.bos.fore.web.action;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.MediaType;
 
 import org.apache.commons.lang3.RandomStringUtils;
@@ -10,12 +14,9 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
-
 import com.aliyuncs.exceptions.ClientException;
-import com.itheima.bos.service.CustomerSerivce;
 import com.itheima.crm.domain.Customer;
 import com.itheima.utils.SmsUtils;
 import com.opensymphony.xwork2.ActionSupport;
@@ -33,6 +34,7 @@ import com.opensymphony.xwork2.ModelDriven;
 public class CustomerAction extends ActionSupport implements ModelDriven<Customer>{
 
     private Customer model = new Customer();
+    
     
     @Override
     public Customer getModel() {
@@ -82,6 +84,27 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
         
         return ERROR;
     }
+    
+    //校验手机号
+    @Action(value="customerAction_findCustomer")
+    public String findCustomer() throws IOException{
+        //获取前台用户输入的手机号
+        String telephone = model.getTelephone();
+        Customer customer = WebClient.create("http://localhost:8180/crm/webService/customerService/findCustomer")
+        .query("telephone", telephone)
+        .accept(MediaType.APPLICATION_JSON)
+        .type(MediaType.APPLICATION_JSON)
+        .get(Customer.class);
 
+        HttpServletResponse response = ServletActionContext.getResponse();
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter writer =response.getWriter();
+        //用户已存在
+        if(customer != null){
+            writer.write("该用户已存在");
+        }
+        
+        return NONE;
+    }
 }
   

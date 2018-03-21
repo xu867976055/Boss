@@ -50,6 +50,15 @@ public interface CustomerService {
     @POST
     @Path("/saveCustomer")
     public void saveCustomer(Customer customer);
+    
+    //校验手机号
+    @GET
+    @Path("/findCustomer")
+    public Customer findCustomer(@QueryParam("telephone")String telephone);
+    
+    
+    
+  
    
 }
   
