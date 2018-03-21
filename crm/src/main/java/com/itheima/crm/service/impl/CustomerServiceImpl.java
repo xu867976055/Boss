@@ -74,6 +74,12 @@ public class CustomerServiceImpl implements CustomerService {
         
         return customerrepository.findByTelephone(telephone);
     }
+
+    @Override
+    public void active(String telephone) {
+          
+        customerrepository.active(telephone);
+    }
     
     
 

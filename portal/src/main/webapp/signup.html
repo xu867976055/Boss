@@ -63,7 +63,6 @@
 												var reg = new RegExp("^1[3456789]\\d{9}$")
 												//判断手机号是否符合规范
 												if(reg.test(telephone)){
-													
 													//发送短信
 													$.post("customerAction_sendSMS.action",{"telephone":telephone})
 													
@@ -73,18 +72,21 @@
 													clock = setInterval(doLoop, 1000); //一秒执行一次
 												}
 												
-												
 											}
+												
+												
+													
+													
+												
+											
 											
 											//检测手机号
 											function checktelephone(){
 												//获取用户输入的手机号
 												var telephone = $("#telephone").val();
 													$.post("customerAction_findCustomer.action",{"telephone":telephone},function(result){
-														
 														$("#msg").text(result);
 													})
-												
 											}
 											//聚焦
 											function textFocus(){

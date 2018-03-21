@@ -54,7 +54,12 @@ public interface CustomerService {
     //校验手机号
     @GET
     @Path("/findCustomer")
-    public Customer findCustomer(@QueryParam("telephone")String telephone);
+    public Customer findCustomer(@QueryParam("telephone") String telephone);
+    
+    //激活
+    @PUT
+    @Path("/active")
+    public void active(@QueryParam("telephone") String telephone);
     
     
     

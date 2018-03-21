@@ -2,6 +2,7 @@ package com.itheima.bos.fore.web.action;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.MediaType;
@@ -14,10 +15,13 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import com.aliyuncs.exceptions.ClientException;
 import com.itheima.crm.domain.Customer;
+import com.itheima.utils.MailUtils;
 import com.itheima.utils.SmsUtils;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
@@ -35,6 +39,9 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 
     private Customer model = new Customer();
     
+    @Autowired
+    private RedisTemplate<String, String> redisTemplate;
+    
     
     @Override
     public Customer getModel() {
@@ -51,14 +58,6 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
         System.out.println("---------------------------------------------"+code);
         //存入session
         ServletActionContext.getRequest().getSession().setAttribute("serverCode", code);
-        try {
-            //发送验证码
-//            SmsUtils.sendSms(telephone, code);
-            SmsUtils.SSM(telephone, code);
-            
-        } catch (ClientException e) {
-            e.printStackTrace();  
-        }
         return NONE;
     }
     
@@ -68,17 +67,57 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
         this.checkcode = checkcode;
     }
     
+    
+    
+    //注册
     @Action(value="customerAction_regist",results={@Result(name="success",location="/signup-success.html",type="redirect"), @Result(name="error",location="/signup-fail.html",type="redirect")})
-           
     public String regist(){
         //获取系统生成的域对象中的验证码
         String serverCode = (String) ServletActionContext.getRequest().getSession().getAttribute("serverCode");
         //校验验证码
         if(StringUtils.isNotEmpty(serverCode) && StringUtils.isNotEmpty(checkcode) && checkcode.equals(serverCode)){
+            
+            
+            
             WebClient.create("http://localhost:8180/crm/webService/customerService/saveCustomer")
             .accept(MediaType.APPLICATION_JSON)
             .type(MediaType.APPLICATION_JSON)
             .post(model);
+            //生成激活码
+            String activeCode = RandomStringUtils.randomNumeric(32);
+            //储存激活码
+            //以电话号为key
+            redisTemplate.opsForValue().set(model.getTelephone(),activeCode,1,TimeUnit.DAYS);
+          
+            String emailBody = "感谢您注册本网站，请在24小时之内点击<a href='http://localhost:8280/portal/customerAction_active.action?activeCode="
+                    + activeCode + "&telephone=" + model.getTelephone()
+                    + "'>本链接</a>激活您的帐号";
+            //发送激活邮件
+            MailUtils.sendMail(model.getEmail(), "激活邮件", emailBody);
+            return SUCCESS;
+        }
+        return ERROR;
+    }
+    
+    //用属性驱动获取激活码
+    private String activeCode;
+    public void setActiveCode(String activeCode) {
+        this.activeCode = activeCode;
+    }
+    
+    //激活
+    @Action(value="customerAction_active",results={@Result(name="success",location="/login.html",type="redirect"), @Result(name="error",location="/signup-fail.html",type="redirect")})
+    public String active(){
+        
+        //系统生成的激活码
+        String serverCode = redisTemplate.opsForValue().get(model.getTelephone());
+        
+        if(StringUtils.isNotEmpty(activeCode)  && StringUtils.isNotEmpty(serverCode) && serverCode.equals(activeCode)){
+            WebClient.create("http://localhost:8180/crm/webService/customerService/active")
+            .query("telephone", model.getTelephone())
+            .accept(MediaType.APPLICATION_JSON)
+            .type(MediaType.APPLICATION_JSON)
+            .put(null);
             return SUCCESS;
         }
         
