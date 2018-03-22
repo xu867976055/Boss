@@ -3,6 +3,7 @@ package com.itheima.crm.service.impl;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.struts2.components.Password;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,14 +44,14 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void assignCustomers2FixedArea(String fixedAreaId, Long[] customerIds) {
+    public void assignCustomers2FixedArea(String fixedAreaId, Long[] subAreaIds) {
           
         if(StringUtils.isNotEmpty(fixedAreaId)){
             //先根据定区id把所有定区的客户全部解绑
             customerrepository.unBindByFixedAreaId(fixedAreaId);
             //再把需要进行绑定的客户进行定区绑定
-            if(customerIds != null && customerIds.length>0){
-                for (Long id : customerIds) {
+            if(subAreaIds != null && subAreaIds.length>0){
+                for (Long id : subAreaIds) {
                     customerrepository.BindByFixedAreaById(fixedAreaId,id);
                 }
                 
@@ -79,6 +80,12 @@ public class CustomerServiceImpl implements CustomerService {
     public void active(String telephone) {
           
         customerrepository.active(telephone);
+    }
+
+    @Override
+    public Customer login(String telephone, String password) {
+        
+        return customerrepository.findByTelephoneAndPassword(telephone,password);
     }
     
     

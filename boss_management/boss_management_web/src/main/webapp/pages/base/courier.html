@@ -17,11 +17,21 @@
 		<script src="../../js/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			function doAdd(){
+				$("#courierForm").form("clear")
 				$('#addWindow').window("open");
 			}
 			
 			function doEdit(){
-				alert("修改...");
+				//判断用户勾选的数据的条数
+				var result = $("#grid").datagrid("getSelections")
+				//alert(result.length)
+				if(result.length == 1){
+					
+					$("#addWindow").window("open")
+					$("#addWindow").form("load",result[0])
+				}else{
+					$.messager.alert('提示','你只能选择一条信息进行修改','info');  
+				} 
 			}
 			
 			function doDelete(){

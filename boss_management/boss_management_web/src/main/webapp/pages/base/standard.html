@@ -43,7 +43,10 @@
 				iconCls : 'icon-add',
 				handler : function(){
 					//alert('增加');
+					//每次按增加之前把表单清空
+					$("#standardForm").form("clear")
 					$("#standardWindow").window("open")
+					
 				}
 			}, {
 				id : 'button-edit',
@@ -66,7 +69,23 @@
 				text : '作废',
 				iconCls : 'icon-cancel',
 				handler : function(){
-					alert('作废');
+					var rows = $("#grid").datagrid("getSelections")
+					if(rows.length != 0){
+						
+						$.messager.confirm('删除', '您确定要删除吗？', function(r){
+							if (r){
+								//可能会选择多个删除，创建一个数组存储id值
+								var arr = new Array();
+								for (var i = 0; i < rows.length; i++) {
+									//向数组中插入id值
+									arr.push(rows[i].id)
+								}
+								window.location.href="../../standardAction_delete.action?ids="+arr.toString()
+							}
+						});
+					}else{
+						$.messager.alert('提示','你至少要选择一个删除','warning'); 
+					}
 				}
 			},{
 				id : 'button-restore',

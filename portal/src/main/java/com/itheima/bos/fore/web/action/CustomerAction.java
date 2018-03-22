@@ -4,8 +4,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.concurrent.TimeUnit;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Request;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -144,6 +147,64 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
         }
         
         return NONE;
+    }
+    
+    
+    private String remember;
+    public void setRemember(String remember) {
+        this.remember = remember;
+    }
+    
+    @Action(value="customerAction_login",results={@Result(name="success",location="/index.html",type="redirect"), 
+            @Result(name="error",location="/login.html",type="redirect"),
+            @Result(name="unactive",location="/waitactive.html",type="redirect")})
+    public String login() throws IOException{
+        
+        HttpServletRequest request = ServletActionContext.getRequest();
+        HttpServletResponse response = ServletActionContext.getResponse();
+        response.setContentType("text/html;charset=utf-8");
+        PrintWriter writer = response.getWriter();
+        //1 校验验证码
+        //系统生成的验证码
+        String validateCode = (String) request.getSession().getAttribute("validateCode");
+        if(StringUtils.isNotEmpty(checkcode) && StringUtils.isNotEmpty(validateCode) && validateCode.equalsIgnoreCase(checkcode)){
+        //2 判断用户是否激活（根据电话获取用户判断）
+            Customer customer = WebClient.create("http://localhost:8180/crm/webService/customerService/findCustomer")
+                    .query("telephone", model.getTelephone())
+                    .accept(MediaType.APPLICATION_JSON)
+                    .type(MediaType.APPLICATION_JSON)
+                    .get(Customer.class);
+            // 空指针异常
+            // Integer int
+            
+            if(customer != null && customer.getType() != null){
+                if(customer.getType() == 1){
+                 //激活
+                Customer customer2 = WebClient.create("http://localhost:8180/crm/webService/customerService/login")
+                        .query("telephone", model.getTelephone())
+                        .query("password", model.getPassword())
+                        .accept(MediaType.APPLICATION_JSON)
+                        .type(MediaType.APPLICATION_JSON)
+                        .get(Customer.class);
+                if(customer2 != null){
+                    //登入成功
+                    request.getSession().setAttribute("customer", customer2);
+                    return SUCCESS;
+                }else{
+                    return ERROR;
+                }
+                    
+                }
+            }else{
+                return "unactive";
+            }
+            
+        }else{
+            writer.print("验证码错误");
+            System.out.println("验证码错误");
+            return ERROR;
+        }
+      return ERROR;
     }
 }
   
