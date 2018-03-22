@@ -20,6 +20,7 @@ import org.springframework.stereotype.Controller;
 import com.itheima.bos.domain.base.Area;
 import com.itheima.bos.domain.base.Constant;
 import com.itheima.bos.domain.base.SubArea;
+import com.itheima.bos.service.FixedAreaService;
 import com.itheima.bos.service.SubAreaService;
 import com.itheima.bos.web.action.CommonAction;
 
@@ -38,7 +39,7 @@ public class SubareaAction extends CommonAction<SubArea>{
 
     @Autowired
     private SubAreaService subAreaService;
-   
+    
     public SubareaAction() {
         super(SubArea.class);  
     }
@@ -83,7 +84,6 @@ public class SubareaAction extends CommonAction<SubArea>{
   //查询已关联的定区的分区
     @Action(value="fixedAreaAction_findAssociationSelectSubArea")
     public String findAssociationSelectSubArea() throws IOException{
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+model.getId());
         List<SubArea> list =  subAreaService.findAssociationSubArea(model.getId());
         
         JsonConfig jsonConfig = new JsonConfig();
@@ -94,32 +94,6 @@ public class SubareaAction extends CommonAction<SubArea>{
     }
     
     
-  //需要获得传递过来的定区id和分区id
-    private Long[] customerIds;
-    public void setCustomerIds(Long[] customerIds) {
-        this.customerIds = customerIds;
-    }
-    
-    
-    //关联分区到指定区域
-    @Action(value="../../subAreaAction_assignSubArea2FixedArea.action",results={@Result(name="success",location="/pages/base/fixed_area.html",type="redirect")})
-    public String assignCustomers2FixedArea(){
-        if(customerIds != null){
-            WebClient.create("http://localhost:8180/crm/webService/customerService/assignCustomers2FixedArea")
-            .query("customerIds", customerIds)
-            .query("fixedAreaId", getModel().getId())
-            .type(MediaType.APPLICATION_JSON)
-            .accept(MediaType.APPLICATION_JSON)
-            .put(null);
-        }else{
-            WebClient.create("http://localhost:8180/crm/webService/customerService/noCustomers2FixedArea")
-            .query("fixedAreaId", getModel().getId())
-            .type(MediaType.APPLICATION_JSON)
-            .accept(MediaType.APPLICATION_JSON)
-            .put(null);
-        }
-       
-        return SUCCESS;
-    }
+  
 }
   

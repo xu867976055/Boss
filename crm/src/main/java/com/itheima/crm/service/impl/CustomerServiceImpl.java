@@ -44,14 +44,14 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void assignCustomers2FixedArea(String fixedAreaId, Long[] subAreaIds) {
+    public void assignCustomers2FixedArea(String fixedAreaId, Long[] customerIds) {
           
         if(StringUtils.isNotEmpty(fixedAreaId)){
             //先根据定区id把所有定区的客户全部解绑
             customerrepository.unBindByFixedAreaId(fixedAreaId);
             //再把需要进行绑定的客户进行定区绑定
-            if(subAreaIds != null && subAreaIds.length>0){
-                for (Long id : subAreaIds) {
+            if(customerIds != null && customerIds.length>0){
+                for (Long id : customerIds) {
                     customerrepository.BindByFixedAreaById(fixedAreaId,id);
                 }
                 

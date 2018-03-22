@@ -96,7 +96,7 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
                     + activeCode + "&telephone=" + model.getTelephone()
                     + "'>本链接</a>激活您的帐号";
             //发送激活邮件
-            MailUtils.sendMail(model.getEmail(), "激活邮件", emailBody);
+            MailUtils.sendMail("激活邮件", emailBody,model.getEmail());
             return SUCCESS;
         }
         return ERROR;

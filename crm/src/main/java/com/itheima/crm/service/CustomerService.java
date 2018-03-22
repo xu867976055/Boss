@@ -41,7 +41,7 @@ public interface CustomerService {
 // 要关联的数据和定区Id进行绑定
     @PUT
     @Path("/assignCustomers2FixedArea")
-    public void assignCustomers2FixedArea(@QueryParam("fixedAreaId") String fixedAreaId,@QueryParam("subAreaIds") Long[] subAreaIds);
+    public void assignCustomers2FixedArea(@QueryParam("fixedAreaId") String fixedAreaId,@QueryParam("customerIds") Long[] customerIds);
    
     @PUT
     @Path("/noCustomers2FixedArea")

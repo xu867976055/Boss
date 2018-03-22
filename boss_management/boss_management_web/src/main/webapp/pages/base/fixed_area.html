@@ -357,11 +357,12 @@
 		<!-- 关联客户 -->
 		<script type="text/javascript">
 		//点击向右移动时，添加左边已经选中的
-		function moveToRight(){
+		function moveRight(){
+			
 			$("#associationSelect").append($("#noassociationSelect option:selected") )
 		}
 		
-		function moveToLeft(){
+		function moveLeft(){
 			$("#noassociationSelect").append($("#associationSelect option:selected") )
 		}
 		
@@ -383,6 +384,7 @@
 		<script type="text/javascript">
 		//点击向右移动时，添加左边已经选中的
 		function moveToRight(){
+			
 			$("#associationSubArea").append($("#noassociationSubArea option:selected") )
 		}
 		
@@ -526,9 +528,9 @@
 								</select>
 							</td>
 							<td>
-								<input type="button" value="》》" id="toRight" onclick="moveToRight()">
+								<input type="button" value="》》" id="toRight" onclick="moveRight()">
 								<br/>
-								<input type="button" value="《《" id="toLeft" onclick="moveToLeft()">
+								<input type="button" value="《《" id="toLeft" onclick="moveLeft()">
 							</td>
 							<td>
 								<select id="associationSelect" name="customerIds" multiple="multiple" size="10"></select>
