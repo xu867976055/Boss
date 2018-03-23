@@ -10,6 +10,16 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  <servlet>
+	<servlet-name>cxf</servlet-name>  
+	<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cxf</servlet-name>
+  	<url-pattern>/webService/*</url-pattern>
+  </servlet-mapping>
+  
+  
   <!-- 指定Spring框架配置文件的位置 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -28,5 +38,7 @@
 		<filter-name>struts</filter-name>
 		<url-pattern>*.action</url-pattern>
 	</filter-mapping>
+	
+	
   
 </web-app>

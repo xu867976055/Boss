@@ -67,7 +67,10 @@ public interface CustomerService {
     public Customer login(@QueryParam("telephone") String telephone,@QueryParam("password") String password);
     
     
-    
+    //激活
+    @GET
+    @Path("/findFixedAreaId")
+    public String findFixedAreaId(@QueryParam("address") String address);
   
    
 }
