@@ -19,9 +19,6 @@ import com.itheima.bos.domain.base.Courier;
 //JpaSpecificationExecutor接口一般都是和JpaRepository接口一起使用
 public interface CourierRepository extends JpaRepository<Courier, Long>,JpaSpecificationExecutor<Courier> {
 
-    @Modifying
-    @Query("update Courier set deltag=1 where id=?")
-    void deleteById(Long id);
 
     List<Courier> findByDeltagIsNull();
     

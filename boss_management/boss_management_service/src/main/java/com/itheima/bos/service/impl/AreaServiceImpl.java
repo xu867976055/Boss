@@ -3,6 +3,7 @@ package com.itheima.bos.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -42,6 +43,22 @@ public class AreaServiceImpl implements AreaService {
         
         q="%"+q.toUpperCase()+"%";
         return areaRepository.findByQ(q);
+    }
+
+    @Override
+    public void addArea(Area area) {
+        areaRepository.save(area);
+    }
+
+    @Override
+    public void deleteById(String ids) {
+        //逻辑删除，判断是否为空
+        if(StringUtils.isNotEmpty(ids)){
+            String[] split = ids.split(",");
+            for (String id : split) {
+                areaRepository.delete(Long.parseLong(id));
+            }
+        }
     }
 
     

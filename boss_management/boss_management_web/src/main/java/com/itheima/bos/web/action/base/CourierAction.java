@@ -86,7 +86,7 @@ public class CourierAction extends CommonAction<Courier>{
 //                判断条件(工号)
                 if(StringUtils.isNotEmpty(courierNum)){
                  // where courierNum = ?
-                   Predicate p1 =  cb.equal(root.get("courierNum").as(String.class), courierNum);
+                   Predicate p1 =  cb.like(root.get("courierNum").as(String.class), "%"+courierNum+"%");
                     list.add(p1);
                 }
                 

@@ -13,9 +13,9 @@ import com.itheima.bos.domain.base.Standard;
  */
 public interface StandardRepository extends JpaRepository<Standard, Long>{
 
-    @Query("delete from Standard where id= ?")
-    @Modifying
-    void deleteById(long parseLong);
+//    @Query("delete from Standard where id= ?")
+//    @Modifying
+//    void deleteById(long parseLong);
 
 }
   

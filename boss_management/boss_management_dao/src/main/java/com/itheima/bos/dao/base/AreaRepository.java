@@ -19,5 +19,6 @@ public interface AreaRepository extends JpaRepository<Area, Long>{
 
     Area findByProvinceAndCityAndDistrict(String province, String city, String district);
 
+
 }
   

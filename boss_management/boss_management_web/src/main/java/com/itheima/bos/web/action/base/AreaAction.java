@@ -160,6 +160,24 @@ public class AreaAction extends CommonAction<Area>{
         list2json(list, jsonConfig);
         return NONE;
     }
+    
+    @Action(value="areaAction_addArea",results={@Result(name="save_success",location="/pages/base/area.html",type="redirect")})
+    public String addArea(){
+        areaService.addArea(getModel());
+        return Constant.SAVE_SUCCESS;
+    }
+    
+    
+    private String ids;
+    public void setIds(String ids) {
+        this.ids = ids;
+    }
+    @Action(value="areaAction_delete",results={@Result(name="delete_by_id_success",location="/pages/base/area.html",type="redirect")})
+    public String delete(){
+        areaService.deleteById(ids);
+        return Constant.DELETE_BY_ID_SUCCESS;
+    }
+    
 
 }
   

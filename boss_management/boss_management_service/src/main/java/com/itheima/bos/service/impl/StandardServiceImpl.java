@@ -45,7 +45,8 @@ public void deleteById(String ids) {
   if(StringUtils.isNotEmpty(ids)){
       String[] split = ids.split(",");
       for (String id : split) {
-          standardRepository.deleteById(Long.parseLong(id));
+//          standardRepository.deleteById(Long.parseLong(id));
+          standardRepository.delete(Long.parseLong(id));
       }
   }
 }

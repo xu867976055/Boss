@@ -21,6 +21,10 @@ public interface AreaService {
 
     List<Area> findByQ(String q);
 
+    void addArea(Area model);
+
+    void deleteById(String ids);
+
     
 
 }
