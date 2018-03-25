@@ -39,6 +39,7 @@ public class WayBillAction extends CommonAction<WayBill>{
     public String save() throws IOException{
         String msg = "0";
         try {
+//            int i = 1/0;
             wayBillService.save(getModel());
         } catch (Exception e) {
             e.printStackTrace();  
