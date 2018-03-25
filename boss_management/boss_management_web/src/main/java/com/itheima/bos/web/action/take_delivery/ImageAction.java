@@ -46,6 +46,7 @@ public class ImageAction extends ActionSupport{
         this.imgFileFileName = imgFileFileName;
     }
 
+    
     @Action(value="imageAction_upload")
     public String upload() throws IOException{
         
