@@ -47,7 +47,7 @@ public class CourierServiceImpl implements CourierService {
         if(StringUtils.isNotEmpty(ids)){
             String[] split = ids.split(",");
             for (String id : split) {
-                courierRepository.delete(Long.parseLong(id));
+                courierRepository.deleteById(Long.parseLong(id));
             }
         }
     }

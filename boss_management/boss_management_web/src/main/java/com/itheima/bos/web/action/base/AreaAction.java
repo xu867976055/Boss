@@ -172,7 +172,7 @@ public class AreaAction extends CommonAction<Area>{
     public void setIds(String ids) {
         this.ids = ids;
     }
-    @Action(value="areaAction_delete",results={@Result(name="delete_by_id_success",location="/pages/base/subArea.html",type="redirect")})
+    @Action(value="areaAction_delete",results={@Result(name="delete_by_id_success",location="/pages/base/area.html",type="redirect")})
     public String delete(){
         areaService.deleteById(ids);
         return Constant.DELETE_BY_ID_SUCCESS;
