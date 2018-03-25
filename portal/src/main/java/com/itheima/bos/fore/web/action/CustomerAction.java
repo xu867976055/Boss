@@ -1,15 +1,14 @@
 package com.itheima.bos.fore.web.action;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.concurrent.TimeUnit;
-
-import javax.servlet.http.Cookie;
+import javax.jms.JMSException;
+import javax.jms.MapMessage;
+import javax.jms.Message;
+import javax.jms.Session;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Request;
-
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.cxf.jaxrs.client.WebClient;
@@ -21,11 +20,11 @@ import org.apache.struts2.convention.annotation.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Controller;
-import com.aliyuncs.exceptions.ClientException;
 import com.itheima.crm.domain.Customer;
 import com.itheima.utils.MailUtils;
-import com.itheima.utils.SmsUtils;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -44,6 +43,8 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
     
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
+    @Autowired
+    private JmsTemplate jmsTemplate;
     
     
     @Override
@@ -59,18 +60,30 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
         //随机生成验证码
         String code = RandomStringUtils.randomNumeric(6);
         System.out.println("---------------------------------------------"+code);
+        //发送验证码(生产者)
+        jmsTemplate.send("sms", new MessageCreator() {
+            
+            @Override
+            public Message createMessage(Session session) throws JMSException {
+                MapMessage message = session.createMapMessage();
+                message.setString("tel", telephone);
+                message.setString("code", code);
+                return message;
+            }
+        });
         //存入session
         ServletActionContext.getRequest().getSession().setAttribute("serverCode", code);
         return NONE;
     }
+    
+    
+    
     
     //获取用户输入的验证码
     private String checkcode;
     public void setCheckcode(String checkcode) {
         this.checkcode = checkcode;
     }
-    
-    
     
     //注册
     @Action(value="customerAction_regist",results={@Result(name="success",location="/signup-success.html",type="redirect"), @Result(name="error",location="/signup-fail.html",type="redirect")})

@@ -6,6 +6,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -54,6 +55,17 @@ public class SubAreaServiceImpl implements SubAreaService {
         FixedArea fixedArea = new FixedArea();
         fixedArea.setId(fixedAreaId);
         return subAreaRepository.findByFixedArea(fixedArea);
+    }
+
+    @Override
+    public void deleteById(String ids) {
+      //逻辑删除，判断是否为空
+        if(StringUtils.isNotEmpty(ids)){
+            String[] split = ids.split(",");
+            for (String id : split) {
+                subAreaRepository.delete(Long.parseLong(id));
+            }
+        }
     }
     
 

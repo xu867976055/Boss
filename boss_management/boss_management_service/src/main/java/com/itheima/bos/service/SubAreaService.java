@@ -32,6 +32,8 @@ public interface SubAreaService {
    
 
     List<SubArea> findAssociationSubArea(Long fixedAreaId);
+
+    void deleteById(String ids);
     
     //查找关联到指定定区的客户
 

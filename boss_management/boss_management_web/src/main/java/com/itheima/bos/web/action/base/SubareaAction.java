@@ -93,6 +93,17 @@ public class SubareaAction extends CommonAction<SubArea>{
         return NONE;
     }
     
+
+    private String ids;
+    public void setIds(String ids) {
+        this.ids = ids;
+    }
+    @Action(value="subAreaAction_delete",results={@Result(name="delete_by_id_success",location="/pages/base/area.html",type="redirect")})
+    public String delete(){
+        subAreaService.deleteById(ids);
+        return Constant.DELETE_BY_ID_SUCCESS;
+    }
+    
     
   
 }
