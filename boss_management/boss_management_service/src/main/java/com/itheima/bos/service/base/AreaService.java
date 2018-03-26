@@ -1,4 +1,4 @@
-package com.itheima.bos.service;
+package com.itheima.bos.service.base;
 
 import java.util.ArrayList;
 import java.util.List;

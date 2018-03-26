@@ -1,4 +1,4 @@
-package com.itheima.bos.service.impl;
+package com.itheima.bos.service.base.impl;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.itheima.bos.dao.base.CourierRepository;
 import com.itheima.bos.domain.base.Courier;
-import com.itheima.bos.service.CourierService;
+import com.itheima.bos.service.base.CourierService;
 
 /**  
  * ClassName:CourierServiceImpl <br/>  

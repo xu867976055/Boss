@@ -1,4 +1,4 @@
-package com.itheima.bos.service.impl;
+package com.itheima.bos.service.base.impl;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.itheima.bos.dao.base.TakeTimeRepository;
 import com.itheima.bos.domain.base.TakeTime;
-import com.itheima.bos.service.TakeTimeService;
+import com.itheima.bos.service.base.TakeTimeService;
 
 /**  
  * ClassName:TakeTimeServiceImpl <br/>  

@@ -16,7 +16,7 @@ import org.springframework.stereotype.Controller;
 import com.itheima.bos.domain.base.Constant;
 import com.itheima.bos.domain.base.FixedArea;
 import com.itheima.bos.domain.base.SubArea;
-import com.itheima.bos.service.FixedAreaService;
+import com.itheima.bos.service.base.FixedAreaService;
 import com.itheima.bos.web.action.CommonAction;
 import com.itheima.crm.domain.Customer;
 

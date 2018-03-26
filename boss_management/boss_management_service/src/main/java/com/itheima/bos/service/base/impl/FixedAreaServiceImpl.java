@@ -1,4 +1,4 @@
-package com.itheima.bos.service.impl;
+package com.itheima.bos.service.base.impl;
 
 import java.util.Set;
 
@@ -18,7 +18,7 @@ import com.itheima.bos.domain.base.FixedArea;
 import com.itheima.bos.domain.base.Standard;
 import com.itheima.bos.domain.base.SubArea;
 import com.itheima.bos.domain.base.TakeTime;
-import com.itheima.bos.service.FixedAreaService;
+import com.itheima.bos.service.base.FixedAreaService;
 
 /**  
  * ClassName:FixedAreaServiceImpl <br/>  

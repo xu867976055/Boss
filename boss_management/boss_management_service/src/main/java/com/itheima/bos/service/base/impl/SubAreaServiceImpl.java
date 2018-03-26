@@ -1,4 +1,4 @@
-package com.itheima.bos.service.impl;
+package com.itheima.bos.service.base.impl;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import com.itheima.bos.dao.base.SubAreaRepository;
 import com.itheima.bos.domain.base.Area;
 import com.itheima.bos.domain.base.FixedArea;
 import com.itheima.bos.domain.base.SubArea;
-import com.itheima.bos.service.SubAreaService;
+import com.itheima.bos.service.base.SubAreaService;
 import com.itheima.crm.domain.Customer;
 
 /**  

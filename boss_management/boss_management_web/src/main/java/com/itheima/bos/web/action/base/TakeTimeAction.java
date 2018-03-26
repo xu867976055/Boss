@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import com.itheima.bos.domain.base.TakeTime;
-import com.itheima.bos.service.TakeTimeService;
+import com.itheima.bos.service.base.TakeTimeService;
 import com.itheima.bos.web.action.CommonAction;
 
 /**  

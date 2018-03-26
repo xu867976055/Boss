@@ -23,7 +23,7 @@ import org.springframework.ui.Model;
 
 import com.itheima.bos.domain.base.Constant;
 import com.itheima.bos.domain.base.Standard;
-import com.itheima.bos.service.StandardService;
+import com.itheima.bos.service.base.StandardService;
 import com.itheima.bos.web.action.CommonAction;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;

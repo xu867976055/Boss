@@ -29,7 +29,7 @@ import org.springframework.stereotype.Controller;
 import com.itheima.bos.domain.base.Area;
 import com.itheima.bos.domain.base.Constant;
 import com.itheima.bos.domain.base.Courier;
-import com.itheima.bos.service.AreaService;
+import com.itheima.bos.service.base.AreaService;
 import com.itheima.bos.web.action.CommonAction;
 import com.itheima.utils.PinYin4jUtils;
 import com.opensymphony.xwork2.ActionSupport;

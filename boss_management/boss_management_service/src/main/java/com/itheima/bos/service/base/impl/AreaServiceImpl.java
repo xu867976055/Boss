@@ -1,4 +1,4 @@
-package com.itheima.bos.service.impl;
+package com.itheima.bos.service.base.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.itheima.bos.dao.base.AreaRepository;
 import com.itheima.bos.domain.base.Area;
-import com.itheima.bos.service.AreaService;
+import com.itheima.bos.service.base.AreaService;
 
 /**  
  * ClassName:AreaServiceImpl <br/>  

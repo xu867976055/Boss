@@ -1,4 +1,4 @@
-package com.itheima.bos.service;
+package com.itheima.bos.service.base;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,4 +1,4 @@
-package com.itheima.bos.service.impl;
+package com.itheima.bos.service.base.impl;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.itheima.bos.dao.base.StandardRepository;
 import com.itheima.bos.domain.base.Standard;
-import com.itheima.bos.service.StandardService;
+import com.itheima.bos.service.base.StandardService;
 
 /**  
  * ClassName:StandardServiceRepository <br/>  

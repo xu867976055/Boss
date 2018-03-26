@@ -31,7 +31,7 @@ import org.springframework.stereotype.Controller;
 import com.itheima.bos.domain.base.Constant;
 import com.itheima.bos.domain.base.Courier;
 import com.itheima.bos.domain.base.Standard;
-import com.itheima.bos.service.CourierService;
+import com.itheima.bos.service.base.CourierService;
 import com.itheima.bos.web.action.CommonAction;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
