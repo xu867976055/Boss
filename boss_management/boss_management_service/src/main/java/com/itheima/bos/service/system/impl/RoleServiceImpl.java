@@ -32,7 +32,7 @@ public class RoleServiceImpl implements RoleService {
     private PermissionRepository permissionRepository;
 
     @Override
-    public Page<Role> findByPage(Pageable pageable) {
+    public Page<Role> findAll(Pageable pageable) {
           
         return roleRepository.findAll(pageable);
     }

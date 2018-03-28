@@ -44,7 +44,7 @@ public class RoleAction extends CommonAction<Role>{
     public String findByPage() throws IOException{
         
         Pageable pageable = new PageRequest(page-1, rows);
-        Page<Role> page = roleService.findByPage(pageable);
+        Page<Role> page = roleService.findAll(pageable);
         
         JsonConfig jsonConfig = new JsonConfig();
         jsonConfig.setExcludes(new String[] {"users","permissions","menus"});
@@ -68,6 +68,19 @@ public class RoleAction extends CommonAction<Role>{
        
         roleService.save(menuIds,permissionIds,getModel());
         return SUCCESS;
+    }
+    
+    @Action(value="roleAction_findAll")
+    public String findAll() throws IOException{
+        
+        Page<Role> page = roleService.findAll(null);
+        List<Role> list = page.getContent();
+        
+        JsonConfig jsonConfig = new JsonConfig();
+        jsonConfig.setExcludes(new String[] {"users","permissions","menus"});
+        
+        list2json(list, jsonConfig);
+        return NONE;
     }
    
 }
