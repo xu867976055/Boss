@@ -47,6 +47,15 @@ public class Menu {
         return name;
     }
     
+    //简单的json需要pId属性,在Menu实体中增加方法
+    public Long getpId(){
+        //一级菜单
+        if(parentMenu == null){
+            return 0L;
+        }
+        return parentMenu.getId(); 
+    }
+    
     public Set<Menu> getChildren(){
         return childrenMenus;
     }

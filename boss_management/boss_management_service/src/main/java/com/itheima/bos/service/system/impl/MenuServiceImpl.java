@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.itheima.bos.dao.system.MenuRepository;
 import com.itheima.bos.domain.system.Menu;
+import com.itheima.bos.domain.system.User;
 import com.itheima.bos.service.system.MenuService;
 
 /**  
@@ -46,6 +47,16 @@ public class MenuServiceImpl implements MenuService {
     public Page<Menu> findByPage(Pageable pageable) {
           
         return menuRepository.findAll(pageable);
+    }
+
+    @Override
+    public List<Menu> findbyUser(User user) {
+        
+        //超级管理员
+        if("admin".equals(user.getUsername())){
+            return menuRepository.findAll();
+        }
+        return menuRepository.findbyUid(user.getId());
     }
 
 }
