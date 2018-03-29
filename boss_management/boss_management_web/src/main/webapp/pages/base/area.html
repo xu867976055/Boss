@@ -1,4 +1,5 @@
-	<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -26,44 +27,52 @@
 	function doAdd() {
 		$("#areaForm").form("clear")
 		$('#addWindow').window("open");
-		
+
 	}
 
 	function doView() {
 		//判断用户勾选的数据的条数
 		var result = $("#grid").datagrid("getSelections")
 		//alert(result.length)
-		if(result.length == 1){
-			
+		if (result.length == 1) {
+
 			$("#addWindow").window("open")
-			$("#addWindow").form("load",result[0])
-		}else{
-			$.messager.alert('提示','你只能选择一条信息进行修改','info');  
-		} 
+			$("#addWindow").form("load", result[0])
+		} else {
+			$.messager.alert('提示', '你只能选择一条信息进行修改', 'info');
+		}
 	}
 
 	function doDelete() {
 		var rows = $("#grid").datagrid("getSelections")
-		if(rows.length != 0){
-			
-			$.messager.confirm('删除', '您确定要删除吗？', function(r){
-				if (r){
-					//可能会选择多个删除，创建一个数组存储id值
-					var arr = new Array();
-					for (var i = 0; i < rows.length; i++) {
-						//向数组中插入id值
-						arr.push(rows[i].id)
-					}
-					window.location.href="../../areaAction_delete.action?ids="+arr.toString()
-				}
-			});
-		}else{
-			$.messager.alert('提示','你至少要选择一个删除','warning'); 
+		if (rows.length != 0) {
+
+			$.messager
+					.confirm(
+							'删除',
+							'您确定要删除吗？',
+							function(r) {
+								if (r) {
+									//可能会选择多个删除，创建一个数组存储id值
+									var arr = new Array();
+									for (var i = 0; i < rows.length; i++) {
+										//向数组中插入id值
+										arr.push(rows[i].id)
+									}
+									window.location.href = "../../areaAction_delete.action?ids="
+											+ arr.toString()
+								}
+							});
+		} else {
+			$.messager.alert('提示', '你至少要选择一个删除', 'warning');
 		}
 	}
-	
-	
-	
+
+	function doExport() {
+
+		//发送一个请求,查询数据,拼装文件
+		window.location.href = "../../areaAction_exportExcel.action"
+	}
 
 	//工具栏
 	var toolbar = [ {
@@ -85,6 +94,11 @@
 		id : 'button-import',
 		text : '导入',
 		iconCls : 'icon-redo'
+	}, {
+		id : 'button-exportExcel',
+		text : '导出文件',
+		iconCls : 'icon-undo',
+		handler : doExport
 	} ];
 	// 定义列
 	var columns = [ [ {
@@ -166,17 +180,15 @@
 	function doDblClickRow() {
 		alert("双击表格数据...");
 	}
-	
-	function saveArea(){
+
+	function saveArea() {
 		var result = $("#areaForm").form("validate")
-		if(result){
+		if (result) {
 			$("#areaForm").submit()
 		}
 	}
-	
 </script>
 </head>
-
 <body class="easyui-layout" style="visibility: hidden;">
 	<div region="center" border="false">
 		<table id="grid"></table>
@@ -187,21 +199,21 @@
 		<div region="north" style="height: 31px; overflow: hidden;"
 			split="false" border="false">
 			<div class="datagrid-toolbar">
-				<a id="save" icon="icon-save" onclick="saveArea()" href="#" class="easyui-linkbutton"
-					plain="true">保存</a>
+				<a id="save" icon="icon-save" onclick="saveArea()" href="#"
+					class="easyui-linkbutton" plain="true">保存</a>
 			</div>
 		</div>
-
 		<div region="center" style="overflow: auto; padding: 5px;"
 			border="false">
-			<form id="areaForm" method="post" action="../../areaAction_addArea.action">
+			<form id="areaForm" method="post"
+				action="../../areaAction_addArea.action">
 				<table class="table-edit" width="80%" align="center">
 					<tr class="title">
-						<td colspan="2">区域信息
-						<!--提供隐藏域 装载id -->
-						<input type="hidden" name="id" />
+						<td colspan="2">
+							区域信息
+							<!--提供隐藏域 装载id -->
+							<input type="hidden" name="id" />
 						</td>
-						
 					</tr>
 					<tr>
 						<td>省</td>
@@ -249,7 +261,6 @@
 			</form>
 		</div>
 	</div>
-
 	<!-- 查询区域-->
 	<div class="easyui-window" title="查询区域窗口" closed="true"
 		id="searchWindow" collapsible="false" minimizable="false"
@@ -289,5 +300,4 @@
 		</div>
 	</div>
 </body>
-
 </html>

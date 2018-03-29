@@ -128,7 +128,7 @@
 				/js/** = anon
 				/validatecode.jsp = anon
 				/userAction_login.action = anon
-				/courierAction_pageQuery.action = perms["courierAction_pageQuery"]
+				/courierAction_findByPage.action = perms["courierAction_findByPage"]
 				/hi.html = perms["courierAction_pageQuery"]
 				/** = authc
 			</value>
