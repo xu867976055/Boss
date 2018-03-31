@@ -32,9 +32,13 @@
 				};
 				
 				// 基本功能菜单加载
-				$.post("menuAction_findbyUser.action",function(data){
+				/* $.post("menuAction_findbyUser.action",function(data){
 					$.fn.zTree.init($("#treeMenu"), setting, data);
-				},"json");
+				},"json"); */
+				
+				$.post("./data/menu.json",function(data){
+							$.fn.zTree.init($("#treeMenu"), setting, data);
+						},"json");
 				
 				
 				// 系统管理菜单加载

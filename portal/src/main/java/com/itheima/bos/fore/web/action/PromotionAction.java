@@ -45,13 +45,14 @@ public class PromotionAction extends ActionSupport{
     @Action(value="promotionAction_findByPage")
     public String findByPage() throws IOException{
         
+        System.out.println();
         PageBean<Promotion> pageBean = WebClient.create(
-                "http://localhost:8080/bos_management_web/webService/promotionService/findByPage")
+                "http://localhost:8080/boss_management_web/webService/promotionService/findByPage")
                 .type(MediaType.APPLICATION_JSON)//
                 .accept(MediaType.APPLICATION_JSON)//
                 .query("pageIndex", pageIndex)//
                 .query("pageSize", pageSize).get(PageBean.class);
-        
+
         String json = JSONObject.fromObject(pageBean).toString();
         HttpServletResponse response = ServletActionContext.getResponse();
         response.setContentType("application/json;charset=UTF-8");
