@@ -2,7 +2,12 @@ package com.itheima.bos.web.action.take_delivery;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -50,7 +55,6 @@ public class ImageAction extends ActionSupport{
     @Action(value="imageAction_upload")
     public String upload() throws IOException{
         
-        System.out.println("imgFileName1111111111111111111"+imgFileFileName);
         Map<String, Object> map = new HashMap<String, Object>();
         
      try {
@@ -76,7 +80,6 @@ public class ImageAction extends ActionSupport{
            
         //获取本项目路径
            String contextPath = servletContext.getContextPath();
-           System.out.println(contextPath+"本项目路径11111111111111111111111");
            
            map.put("error", 0);
            map.put("url", contextPath + "/upload/" + fileName);
@@ -94,6 +97,64 @@ public class ImageAction extends ActionSupport{
         response.setContentType("application/json;charset=utf-8");
         response.getWriter().print(json);
      
+        return NONE;
+    }
+    
+    
+    
+ // 图片扩展名
+    String[] fileTypes = new String[] {"gif", "jpg", "jpeg", "png", "bmp"};
+
+    @Action("imageAction_manage")
+    public String manager() throws IOException {
+        // 指定保存图片的文件夹
+        String dirPath = "/upload";
+        // 获取保存图片的文件夹的绝对磁盘路径
+        ServletContext servletContext =
+                ServletActionContext.getServletContext();
+        String dirRealPath = servletContext.getRealPath(dirPath);
+
+        File currentPathFile = new File(dirRealPath);
+        // 遍历目录获取文件信息
+        List<Hashtable> fileList = new ArrayList<Hashtable>();
+        if (currentPathFile.listFiles() != null) {
+            for (File file : currentPathFile.listFiles()) {
+                Hashtable<String, Object> hash =
+                        new Hashtable<String, Object>();
+                String fileName = file.getName();
+                if (file.isDirectory()) {
+                    hash.put("is_dir", true);
+                    hash.put("has_file", (file.listFiles() != null));
+                    hash.put("filesize", 0L);
+                    hash.put("is_photo", false);
+                    hash.put("filetype", "");
+                } else if (file.isFile()) {
+                    String fileExt =
+                            fileName.substring(fileName.lastIndexOf(".") + 1)
+                                    .toLowerCase();
+                    hash.put("is_dir", false);
+                    hash.put("has_file", false);
+                    hash.put("filesize", file.length());
+                    hash.put("is_photo",
+                            Arrays.<String>asList(fileTypes).contains(fileExt));
+                    hash.put("filetype", fileExt);
+                }
+                hash.put("filename", fileName);
+                hash.put("datetime", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+                        .format(file.lastModified()));
+                fileList.add(hash);
+            }
+        }
+
+        JSONObject result = new JSONObject();
+        // 获取本项目路径
+        String contextPath = servletContext.getContextPath();
+        result.put("current_url", contextPath + "/upload/");
+        // 把所有的图片信息查询出来,封装在fileList对象的身上
+        result.put("file_list", fileList);
+        HttpServletResponse response = ServletActionContext.getResponse();
+        response.setContentType("application/json;charset=UTF-8");
+        response.getWriter().write(result.toString());
         return NONE;
     }
     
