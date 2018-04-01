@@ -4,6 +4,8 @@ package com.itheima.bos.web.action.base;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,6 +15,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFRow;
@@ -30,17 +33,21 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
+
 import com.itheima.bos.domain.base.Area;
 import com.itheima.bos.domain.base.Constant;
-import com.itheima.bos.domain.base.Courier;
 import com.itheima.bos.service.base.AreaService;
 import com.itheima.bos.web.action.CommonAction;
 import com.itheima.utils.FileDownloadUtils;
 import com.itheima.utils.PinYin4jUtils;
-import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.ModelDriven;
 
-import net.sf.json.JSONObject;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JRExporterParameter;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.json.JsonConfig;
 
 /**  
@@ -247,6 +254,54 @@ public class AreaAction extends CommonAction<Area>{
         //写出文件
         workbook.write(outputStream);
         workbook.close();
+        
+        return NONE;
+    }
+    
+    
+    @Action(value="areaAction_exportCharts")
+    public String exportCharts() throws IOException{
+        
+        
+        List<Object[]> list = areaService.exportCharts();
+        list2json(list, null);
+        return NONE;
+    }
+    
+    
+    @Autowired
+    private DataSource dataSource;
+    
+    @Action(value="areaAction_exportPDF")
+    public String exportPDF() throws Exception{
+        
+
+        // 读取 jrxml 文件
+        String jrxml = ServletActionContext.getServletContext()
+                .getRealPath("/jasper/area.jrxml");
+        // 准备需要数据
+        Map<String, Object> parameters = new HashMap<String, Object>();
+        parameters.put("company", "芸芸众生");
+        // 准备需要数据
+        JasperReport report = JasperCompileManager.compileReport(jrxml);
+        JasperPrint jasperPrint = JasperFillManager.fillReport(report,
+                parameters, dataSource.getConnection());
+
+        HttpServletResponse response = ServletActionContext.getResponse();
+        OutputStream ouputStream = response.getOutputStream();
+        // 设置相应参数，以附件形式保存PDF
+        response.setContentType("application/pdf");
+        response.setCharacterEncoding("UTF-8");
+        response.setHeader("Content-Disposition",
+                "attachment; filename=" + FileDownloadUtils
+                        .encodeDownloadFilename("工作单.pdf", ServletActionContext
+                                .getRequest().getHeader("user-agent")));
+        // 使用JRPdfExproter导出器导出pdf
+        JRPdfExporter exporter = new JRPdfExporter();
+        exporter.setParameter(JRExporterParameter.JASPER_PRINT, jasperPrint);
+        exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, ouputStream);
+        exporter.exportReport();// 导出
+        ouputStream.close();// 关闭流
         
         return NONE;
     }

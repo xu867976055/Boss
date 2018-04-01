@@ -25,6 +25,8 @@ public interface AreaService {
 
     void deleteById(String ids);
 
+    List<Object[]> exportCharts();
+
     
 
 }

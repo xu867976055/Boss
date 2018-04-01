@@ -23,6 +23,9 @@
 	src="../../js/easyui/ext/jquery.cookie.js"></script>
 <script src="../../js/easyui/locale/easyui-lang-zh_CN.js"
 	type="text/javascript"></script>
+	<script src="../../highcharts/highcharts.js"></script>
+<script src="../../highcharts/modules/exporting.js"></script>
+<script src="../../highcharts/highcharts-zh_CN.js"></script>
 <script type="text/javascript">
 	function doAdd() {
 		$("#areaForm").form("clear")
@@ -69,9 +72,30 @@
 	}
 
 	function doExport() {
-
 		//发送一个请求,查询数据,拼装文件
 		window.location.href = "../../areaAction_exportExcel.action"
+	}
+	
+	function doExportCharts(){
+		$("#chartWindow").window("open")
+		$.post("../../areaAction_exportCharts.action",function(data){
+			
+			$('#container').highcharts({
+				title : {
+					text : '区域数量占比'
+				},
+				series : [ {
+					type : 'pie',
+					name : '区域数量占比',
+					data : data
+				} ]
+			});
+			
+		}) 
+	}
+	
+	function doExportPDF(){
+		window.location.href="../../areaAction_exportPDF.action"
 	}
 
 	//工具栏
@@ -99,7 +123,17 @@
 		text : '导出文件',
 		iconCls : 'icon-undo',
 		handler : doExport
-	} ];
+	}, {
+		id : 'button-export',
+		text : '导出图表',
+		iconCls : 'icon-undo',
+		handler : doExportCharts
+	}, {
+		id : 'button-export',
+		text : '导出PDF',
+		iconCls : 'icon-undo',
+		handler : doExportPDF
+	}];
 	// 定义列
 	var columns = [ [ {
 		field : 'id',
@@ -168,6 +202,17 @@
 		$('#addWindow').window({
 			title : '添加修改区域',
 			width : 400,
+			modal : true,
+			shadow : true,
+			closed : true,
+			height : 400,
+			resizable : false
+		});
+		
+		
+		$('#chartWindow').window({
+			title : '添加修改区域',
+			width : 500,
 			modal : true,
 			shadow : true,
 			closed : true,
@@ -261,6 +306,13 @@
 			</form>
 		</div>
 	</div>
+	
+	<div class="easyui-window" title="分区分布图" id="chartWindow" collapsible="false" 
+		minimizable="false" maximizable="false" style="top:20px;left:200px">
+		<div id="container" style="min-width: 400px; height: 400px"></div>
+	</div>
+	
+	
 	<!-- 查询区域-->
 	<div class="easyui-window" title="查询区域窗口" closed="true"
 		id="searchWindow" collapsible="false" minimizable="false"
